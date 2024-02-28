@@ -1,0 +1,57 @@
+<!-- 搜索框 -->
+<view class="searchRoot">
+	<input class="searchInput" bindconfirm='goSearch' confirm-type='search' bindinput="getSearchKey" placeholder="搜索商品或品牌" />	
+	<image class="searchImg" bindtap="goSearch" src="/image/search.png"></image>
+</view>
+
+
+<!-- 第一排 -->
+<view class="panel">
+	<view class="item">
+		<image class="item-image" src="/image/diamond.png" />
+		<text class="item-text">品质好物</text>
+	</view>
+	<view class="item">
+		<image class="item-image" src="/image/money.png" />
+		<text class="item-text">买贵就赔</text>
+	</view>
+	<view class="item">
+		<image class="item-image" src="/image/car.png" />
+		<text class="item-text">极速送达</text>
+	</view>
+	<view class="item">
+		<image class="item-image" src="/image/service.png" />
+		<text class="item-text">无忧售后</text>
+	</view>
+</view>
+
+<!-- 顶部轮播图 -->
+<view class="top-swiper">
+	<view class="swiper-border">
+		<swiper indicator-dots="{{true}}" indicator-color="gainsboro" indicator-active-color="var(--themeColor)" autoplay="true" circular="true">
+			<block wx:for="{{banner}}" wx:key="banner">
+				<swiper-item data-id="{{item.id}}" bindtap="goDetail">
+					<image class="swiper-img" src='{{item.picUrl}}' mode="aspectFill" style="width:100%;height:100%" />
+				</swiper-item>
+			</block>
+		</swiper>
+	</view>
+</view>
+
+<!--推荐商品  -->
+<view wx:if="{{goodList&&goodList.length>0}}">	
+  <view class="recommend">
+		<block wx:for="{{goodList}}" wx:key="index">
+			<view class="good_item" data-id="{{item._id}}" bindtap="goDetail">
+				<image class="cai_img" src="{{item.img[0]}}" />
+				<view class="cai_root2">
+					<view class="cai_title" data-index="{{index}}">{{item.name}}</view>
+					<view class="cai_sell">剩余：{{item.num}} </view>
+					<view class="price-stepper">
+						<view class="cai_price" data-index="{{index}}">{{item.price}}</view>
+					</view>
+				</view> 
+			</view>
+		</block>
+	</view> 
+</view>

@@ -1,0 +1,93 @@
+page {
+  background-color: gainsboro;
+}
+/* 列表样式 */
+.cont_count {
+  background-color: white;
+  margin: 8rpx;
+  border-radius: 20rpx;
+}
+
+.dingdanbianhao {
+  /* 订单编号 */
+  padding: 10rpx 40rpx;
+  font-size: 25rpx;
+  color: gray;
+  border-bottom: 1rpx solid #d4d4d4;
+}
+
+/* 内容区域 */
+.content {
+  display: flex;
+  margin: 5rpx 25rpx;
+  flex-direction: row;
+  justify-content: space-between;
+  justify-items: center;
+  align-items: center;
+}
+
+.mingxi {
+  /* 订单明细 */
+  display: flex;
+  flex-direction: column;
+  flex: 5;
+  font-size: 28rpx;
+  padding: 15rpx;
+}
+
+.mingxi_item {
+  margin-top: 10rpx;
+  width: 450rpx;
+  /* 超过9个字省略号 */
+  font-weight: 9;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-wrap: normal;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+.item_top {
+  margin-top: -40rpx;
+  margin-left: 495rpx;
+}
+
+.detail {
+  margin: 10rpx;
+  font-size: 25rpx;
+  color: var(--themeColor);
+}
+
+/* 评论 */
+.item_root {
+  margin-left: 25rpx;
+  margin-top: -25rpx;
+  padding: 15rpx;
+}
+
+.time {
+  font-size: 25rpx;
+  width: 400rpx;
+  color: gray;
+}
+
+.score {
+  font-size: 25rpx;
+  color: var(--themeColor);
+  margin-top: -35rpx;
+  margin-left: 385rpx;
+}
+
+.text {
+  font-size: 24rpx;
+  line-height: 40rpx;
+  margin-top: 10rpx;
+  color: gray;
+}
+
+/* 数据为空 */
+.nothing {
+  margin-top: 40rpx;
+  text-align: center;
+}

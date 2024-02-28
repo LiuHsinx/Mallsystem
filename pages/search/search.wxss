@@ -1,0 +1,99 @@
+page {
+  background: #ebebeb;
+}
+
+/* 搜索框 */
+.searchRoot {
+  background: #FE2E2E; 
+  justify-content: space-between;
+  padding: 25rpx;
+  display: flex; 
+}
+.searchInput {
+  height: 70rpx;
+  width: 640rpx;
+  margin-left: -8rpx;
+  padding-right: 50rpx;
+  padding-left: 30rpx;  
+  border-radius: 30rpx;
+  background-color: white; 
+}
+.searchImg {
+  width: 42rpx;
+  height: 42rpx;
+  margin-top: 14rpx;
+  margin-left: -50rpx;
+}
+/*列表  */
+.good_item {
+  display: flex;
+  align-items: center;
+  height: 150rpx;
+  padding: 5rpx 0rpx;
+  background-color: #ffffff;
+  margin-top: 3rpx;
+}
+
+.cai_img {
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 15rpx;
+  line-height: 120rpx;
+  text-align: center;
+  margin-left: 15rpx;
+  margin-right: 30rpx;
+}
+
+.cai_root2 {
+  flex: 1;
+  min-width: 0
+}
+
+.cai_title {
+  font-weight: 400;
+  font-size: 38rpx;
+  width: auto;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-wrap: normal;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+.cai_sell {
+  font-size: 30rpx;
+  color: gray;
+}
+
+/*价格*/
+
+.cai_price {
+  font-weight: bold;
+  font-size: 32rpx;
+  color: var(--themeColor);
+}
+
+/*人民币符号*/
+
+.cai_price:before {
+  content: "￥";
+  font-size: 14px;
+}
+
+/* 未搜索到商品 */
+.bg {
+  min-height: 100vh;
+  background-color: gainsboro;
+  padding: 15rpx;
+}
+.nothing {
+  padding: 15rpx;
+  margin: 90rpx;
+  text-align: center;
+  color: white;
+  background: #FA8072;
+  border-radius: 15rpx;
+  
+}
+

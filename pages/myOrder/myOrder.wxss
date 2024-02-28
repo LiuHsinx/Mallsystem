@@ -1,0 +1,292 @@
+/* 顶部菜单切换 */
+page {
+  background-color: gainsboro;
+}
+
+.navbar {
+  display: flex;
+  background: #fff;
+}
+
+/* 没有数据时 */
+.none_tab {
+  position: relative;
+  top: 20rpx;
+  color: #999;
+  font-size: 32rpx;
+}
+
+.navbar .item {
+  /* 默认选中菜单 */
+  position: relative;
+  flex: auto;
+  font-size: 27rpx;
+  width: 100rpx;
+  text-align: center;
+  line-height: 80rpx;
+  color: gray;
+  border-bottom: 3rpx solid #ddd;
+}
+
+.navbar .item.active {
+  /* 选中菜单样式 */
+  color: #FE2E2E;
+  border-bottom: 6rpx solid #FE2E2E;
+}
+
+
+.navbar .item.active:after {
+  /* 字体 */
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 4rpx;
+}
+
+/* 全部 */
+
+.cont_count {
+  background-color: white;
+  margin: 8rpx;
+  border-radius: 20rpx;
+}
+
+.dingdanbianhao {
+  /* 订单编号 */
+  padding: 10rpx 40rpx;
+  font-size: 25rpx;
+  color: gray;
+  border-bottom: 1rpx solid #d4d4d4;
+}
+
+
+/* 内容区域 */
+.content {
+  
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  justify-items: center;
+  align-items: center;
+}
+
+.mingxi {
+  /* 订单明细 */
+  display: flex;
+  flex-direction: column;
+  flex: 5;
+  font-size: 28rpx;
+  padding: 15rpx;
+}
+
+.mingxi_item {
+  margin-left: 25rpx;
+  margin-top: 10rpx;
+  width: 520rpx;
+  /* 超过9个字省略号 */
+  font-weight: 9;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-wrap: normal;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+.mingxi_price {
+  font-size: 25rpx;
+  margin-left: 590rpx;
+  margin-top: -40rpx;
+
+}
+
+.mingxi_number {
+  position: absolute;
+  font-size: 20rpx;
+  color: gray;
+  margin-left: 630rpx;
+  margin-top: 55rpx;
+}
+.time {
+  margin-left: 40rpx;
+  margin-top: 10rpx;
+  font-size: 20rpx;
+  width: 400rpx;
+  color: gray;
+
+}
+.dizhi {
+  padding: 10rpx 40rpx;
+  margin-top: 10rpx;
+  font-size: 20rpx;
+  color: gray;
+}
+
+.jiage {
+  font-size: 28rpx;
+  width: 200rpx;
+  margin-left: 530rpx;
+  margin-top: 10rpx;
+  color: var(--themeColor);
+  margin-bottom: 10rpx;
+  padding: 5rpx;
+}
+
+.coent_list {
+  padding: 10rpx;
+}
+
+.dingdanbtn {
+  color: #FFA500;
+  width: 120rpx;
+  height: 40rpx;
+  text-align: center;
+  border: 1rpx solid #FFA500;
+  font-size: 25rpx;
+  display: inline-block;
+  line-height: 40rpx;
+  border-radius: 50rpx;
+  margin-bottom: 10rpx;
+}
+
+.cancle {
+  /* 取消订单 */
+  position: relative;
+  color: gray;
+  margin-right: 15rpx;
+  text-align: center;
+  border: 1rpx solid gray;
+  font-size: 22rpx;
+  width: 100rpx;
+  height: 35rpx;
+  display: inline-block;
+  line-height: 35rpx;
+  border-radius: 50rpx;
+  margin-left: 440rpx;
+  margin-bottom: 10rpx;
+}
+
+.dingdanbtn1 {
+  color: #FFA500;
+  width: 120rpx;
+  height: 40rpx;
+  text-align: center;
+  border: 1rpx solid #FFA500;
+  font-size: 25rpx;
+  display: inline-block;
+  line-height: 40rpx;
+  border-radius: 50rpx;
+  margin-bottom: 10rpx;
+  margin-left: 550rpx;
+}
+/* 评论弹窗 */
+
+.toast_box {
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+}
+
+.toastbg {
+  opacity: 0.4;
+  background-color: black;
+  position: absolute;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.showToast {
+  position: absolute;
+  opacity: 1;
+  width: 70%;
+  margin-left: 15%;
+  margin-top: 40%;
+}
+
+.toast-title {
+  padding-left: 5%;
+  background-color: var(--themeColor);
+  color: white;
+  padding-top: 2vh;
+  padding-bottom: 2vh;
+  border-top-right-radius: 16rpx;
+  border-top-left-radius: 16rpx;
+}
+
+/*星星评论*/
+.star {
+  padding-top: 2vh;
+  padding-left: 3vh;
+  display: flex;
+  flex-direction: row;
+  height: 69rpx;
+  background-color: white;
+}
+.small_pic {
+  height: 69rpx;
+  width: 36rpx;
+  background-color: white;
+}
+.fenshu {
+  color: var(--themeColor);
+  font-size: 32rpx;
+  height: 69rpx;
+  line-height: 69rpx;
+  margin-left: 12rpx;
+}
+
+.toast-main {
+  padding-top: 2vh;
+  padding-bottom: 2vh;
+  background-color: white;
+  text-align: center;
+}
+
+.toast-input {
+  margin-left: 5%;
+  margin-right: 5%;
+  border: 1px solid #ddd;
+  padding-left: 2vh;
+  padding-right: 2vh;
+  padding-top: 1vh;
+  padding-bottom: 1vh;
+}
+
+.textarea_comment {
+  height: 80px;
+  width: 100%;
+}
+
+.toast-button {
+  display: flex;
+}
+
+.button1 {
+  width: 50%;
+}
+
+.button2 {
+  width: 50%;
+}
+
+.button1 button {
+  width: 100%;
+  background-color: white;
+  color: gray;
+  border-radius: 0px;
+  border-bottom-left-radius: 16rpx;
+}
+
+.button2 button {
+  width: 100%;
+  background-color: white;
+  color: black;
+  border-radius: 0px;
+  border-bottom-right-radius: 16rpx;
+}

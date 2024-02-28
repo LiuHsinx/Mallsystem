@@ -1,0 +1,40 @@
+page {
+  --themeColor: #FE2E2E
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+/*个人中心的条目布局,全局统一布局  */
+.my_item {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 13px;
+  background: white;
+  border-bottom: 1px solid gainsboro;
+}
+
+.item-image {
+  height: 36rpx;
+  width: 36rpx;
+}
+
+.item-text {
+  margin-left: 15rpx;
+}
+.right_arrow {
+  border: solid gainsboro;
+  border-width: 0 3px 3px 0;
+  padding: 3px;
+  position: absolute;
+  right: 15px;
+  justify-content: center;
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  
+}
